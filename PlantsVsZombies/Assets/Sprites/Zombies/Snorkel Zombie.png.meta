@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,16 +34,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,18 +121,622 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Snorkel Zombie_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 268
+        width: 56
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0644409f86e262a4481c57ceb57f8b87
+      internalID: -368524505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_5
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 272
+        width: 26
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd354401e1a0ebe42ad6d101ffa9a026
+      internalID: -1829904134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_6
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 272
+        width: 56
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9114cdd89448dac4ab5e6ae17755272c
+      internalID: -1000383719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_7
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 268
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd4abf568f8f45428d0139e7d8f8439
+      internalID: 363182189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_8
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 272
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f251b3ec2f76a6b44b6d52ee0bc32bde
+      internalID: 387955685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_9
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 273
+        width: 55
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25cf0290601f217459400e0de9126e60
+      internalID: -2022428277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_10
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 268
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944094bebcee98d40aa62191edd5b95a
+      internalID: -1148834992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 210
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb9cedbe05bf9c4ba1d972ed48da9b2
+      internalID: -327372834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_16
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 230
+        width: 37
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2b3919b7b17504ab716ddf6871ca3f
+      internalID: -1674705749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_17
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 165
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 367b7ed2ed0444749bd72bd6335f4142
+      internalID: -1977311297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_22
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 165
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf90d6c918b2f24c8fa6b9a28180960
+      internalID: 2046094138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_24
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 177
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c170b55afbe0ae742a8b6d1558991f69
+      internalID: 1542589332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_25
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 174
+        width: 25
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02710f90830d4bb49ae76f2710d39797
+      internalID: 832766556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_26
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 119
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdfa23145021c2f489675923ae6830a2
+      internalID: 668635176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_30
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 133
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b403fc742b43114aa6b09dae8b7b981
+      internalID: -346341844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_32
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 157
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843002a3b30c27d4ca79aeb73c9080d0
+      internalID: 783737564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_33
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 133
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b9041538b9c174aba95c51da75b55a
+      internalID: 1461078764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 81
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c6c470fb3f40d459e63460eb8aca90
+      internalID: 1834974976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_41
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 61
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad9721faf58f6a419b410b08e9f8b64
+      internalID: 805320410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_42
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 75
+        width: 58
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3eeff27cb63c24b846a64a53614edd
+      internalID: 200407118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_49
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 22
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20486cc3e72fded4f9ea8a8f6edc7bf8
+      internalID: -429675415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_50
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 25
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f73cadf53ed07944b054c797f4038e3
+      internalID: -343309667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_51
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 32
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153ec80171b7e7e4da436ab388abe9ef
+      internalID: 962351851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_52
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 66
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 140831c72be75444ba11387f871a7223
+      internalID: 1235370496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_56
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 3
+        width: 60
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 256b5a76cbbac8e4fb44381443129753
+      internalID: 995535897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snorkel Zombie_57
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 2
+        width: 61
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15a5cf1c0615d944b38b94f9cec0ea6
+      internalID: 1018600695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Snorkel Zombie_0: 988136830
+      Snorkel Zombie_1: -288072882
+      Snorkel Zombie_10: -1148834992
+      Snorkel Zombie_11: -1281966033
+      Snorkel Zombie_12: -724067114
+      Snorkel Zombie_13: 1060617690
+      Snorkel Zombie_14: 176990953
+      Snorkel Zombie_15: -327372834
+      Snorkel Zombie_16: -1674705749
+      Snorkel Zombie_17: -1977311297
+      Snorkel Zombie_18: -916339080
+      Snorkel Zombie_19: -1766976109
+      Snorkel Zombie_2: 1377157319
+      Snorkel Zombie_20: 2008788728
+      Snorkel Zombie_21: 1519971956
+      Snorkel Zombie_22: 2046094138
+      Snorkel Zombie_23: 928049030
+      Snorkel Zombie_24: 1542589332
+      Snorkel Zombie_25: 832766556
+      Snorkel Zombie_26: 668635176
+      Snorkel Zombie_27: -1065011226
+      Snorkel Zombie_28: -793667877
+      Snorkel Zombie_29: -676350568
+      Snorkel Zombie_3: 2007841359
+      Snorkel Zombie_30: -346341844
+      Snorkel Zombie_31: 1967324514
+      Snorkel Zombie_32: 783737564
+      Snorkel Zombie_33: 1461078764
+      Snorkel Zombie_34: -1568538236
+      Snorkel Zombie_35: 295642976
+      Snorkel Zombie_36: 213592278
+      Snorkel Zombie_37: -1584614042
+      Snorkel Zombie_38: -435875383
+      Snorkel Zombie_39: 1284474307
+      Snorkel Zombie_4: -368524505
+      Snorkel Zombie_40: 1834974976
+      Snorkel Zombie_41: 805320410
+      Snorkel Zombie_42: 200407118
+      Snorkel Zombie_43: 786374436
+      Snorkel Zombie_44: -2146249293
+      Snorkel Zombie_45: -1774266030
+      Snorkel Zombie_46: -1446669824
+      Snorkel Zombie_47: 1172141377
+      Snorkel Zombie_48: -901121192
+      Snorkel Zombie_49: -429675415
+      Snorkel Zombie_5: -1829904134
+      Snorkel Zombie_50: -343309667
+      Snorkel Zombie_51: 962351851
+      Snorkel Zombie_52: 1235370496
+      Snorkel Zombie_53: -398632448
+      Snorkel Zombie_54: -1303749741
+      Snorkel Zombie_55: -603779581
+      Snorkel Zombie_56: 995535897
+      Snorkel Zombie_57: 1018600695
+      Snorkel Zombie_6: -1000383719
+      Snorkel Zombie_7: 363182189
+      Snorkel Zombie_8: 387955685
+      Snorkel Zombie_9: -2022428277
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
