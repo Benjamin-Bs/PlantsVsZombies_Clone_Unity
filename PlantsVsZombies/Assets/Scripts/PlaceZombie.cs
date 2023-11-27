@@ -1,14 +1,11 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
-public class PlacePlant : MonoBehaviour
+public class PlaceZombie : MonoBehaviour
 {
     [SerializeField]
-    private GameObject plant;
+    private GameObject zombie;
 
     [SerializeField] 
     private Grid grid;
@@ -17,12 +14,11 @@ public class PlacePlant : MonoBehaviour
 
     
     private void Start() {
-        this.myIndicator = Object.Instantiate(this.plant);
+        this.myIndicator = Object.Instantiate(this.zombie);
     }
     
     void Update()
     {
-        // setCellPosition to MousePosition
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
         Vector3Int position = this.grid.WorldToCell(mousePosition);
@@ -30,26 +26,19 @@ public class PlacePlant : MonoBehaviour
         worldPosition.z = 0;
         if (position.x >= 0 && position.x <= 8 && position.y >= 0 && position.y <= 4)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
-            
-            if (hit.collider == null || hit.collider.gameObject.layer != 6)
+            this.myIndicator.transform.position = worldPosition;
+
+            if (Input.GetMouseButtonDown(0))
             {
-                this.myIndicator.transform.position = worldPosition;
-
-                if (Input.GetMouseButtonDown(0))
-                {
-                    
-                    // place new Plant
-                    GameObject newPlant = Object.Instantiate(plant, worldPosition, Quaternion.identity);
-
-
-                    BoxCollider2D boxCollider = newPlant.AddComponent<BoxCollider2D>();
-                    newPlant.layer = 6;
-                    boxCollider.size = new Vector2(1.05f, 1.3f);
-                    SetLayerRecursive(newPlant, 10 * (10 - position.y));
-
-                }
+                // place new Zombie
+                GameObject newZombie = Object.Instantiate(this.zombie, worldPosition, Quaternion.identity);
+                
+                BoxCollider2D boxCollider = newZombie.AddComponent<BoxCollider2D>();
+                newZombie.layer = 7;
+                boxCollider.size = new Vector2(10f, 10f);
+                Debug.Log(boxCollider.transform.position);
+                
+                SetLayerRecursive(newZombie, 10*(10-position.y));
             }
         }
     }

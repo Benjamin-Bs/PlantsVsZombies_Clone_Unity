@@ -447,6 +447,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1947033959}
   - component: {fileID: 1947033960}
+  - component: {fileID: 1947033961}
+  - component: {fileID: 1947033962}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -481,8 +483,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36747d40fbbe07f4b83096bd3935576b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plant: {fileID: 4617348193465872976, guid: 21ba2efb9575e2a4886758af38d84db1, type: 3}
+  plant: {fileID: 4737537633657123786, guid: 3daf1dff45e21084f8f64bca69165efa, type: 3}
   grid: {fileID: 1741156657}
+--- !u!114 &1947033961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947033958}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47d5e25ce920da542ab9ccaaa52e7dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombie: {fileID: 0}
+  grid: {fileID: 0}
+--- !u!114 &1947033962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947033958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33a69d280fbf54547b3bddee6abbfb4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

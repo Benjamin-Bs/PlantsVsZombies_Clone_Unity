@@ -8,7 +8,7 @@ public class ChoosePlant : MonoBehaviour
     
     void Start()
     {
-        chosenPlant = Resources.Load<GameObject>("/Assets/Prefabs/Plants/Peashooter"); 
+        chosenPlant = Resources.Load<GameObject>("/Assets/Prefabs/Plants/Peashooter.prefab"); 
         Debug.Log(chosenPlant);
     }
     
@@ -17,14 +17,14 @@ public class ChoosePlant : MonoBehaviour
         //GameObject prefabToInstantiate = Resources.Load<GameObject>("Assets/Prefabs/Plants/Peashooter.prefab");
         if (Camera.main.ScreenToWorldPoint(Input.mousePosition).x > 0)
         {
-            chosenPlant = Resources.Load<GameObject>("/Assets/Prefabs/Plants/Peashooter");    
-            Debug.Log(chosenPlant);
+            chosenPlant = Resources.Load<GameObject>("/Assets/Prefabs/Plants/Peashooter.prefab");    
+            
         }
         else
         {
-            chosenPlant = Resources.Load<GameObject>("/Assets/Prefabs/Plants/Double_Peashooter");
+            chosenPlant = Resources.Load<GameObject>("/Assets/Prefabs/Plants/Double_Peashooter.prefab");
         }
-
+        Debug.Log(chosenPlant);
         
     }
 }
