@@ -43,7 +43,7 @@ ScriptedImporter:
     seamlessCubemap: 0
     alphaIsTransparency: 1
     spriteTessellationDetail: -1
-    textureType: 0
+    textureType: 8
     textureShape: 1
     singleChannelComponent: 0
     flipbookRows: 0
