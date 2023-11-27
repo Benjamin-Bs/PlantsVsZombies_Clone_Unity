@@ -1,31 +1,36 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI; 
 
 
 public class CollectSun : MonoBehaviour
 {
-    private int score = 0;
-    public Text halloText;
+    private int sunScore = 0;
+    [SerializeField]
+    private Text mytext;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        mytext = GetComponent<Text>();
     }
 
-    public void AddSun()
+    private void OnMouseDown()
     {
-        
+        sunScore += 25;
+        if (mytext != null)
+        {
+            mytext.text = "SunScore : "+ sunScore.ToString();
+        }
+        Debug.Log(sunScore);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            halloText.text = "Hallo Welt";
-        }
+        
     }
 }
