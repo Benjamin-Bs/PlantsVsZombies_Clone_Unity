@@ -271,7 +271,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1742240307
-  m_SortingLayer: 1
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6366ec134e0fe664ab8fcc945e0eea75, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -419,7 +419,7 @@ Transform:
   m_GameObject: {fileID: 1741156655}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.4, y: -2.8, z: 0}
+  m_LocalPosition: {x: -4.5, y: -2.8, z: 0}
   m_LocalScale: {x: 0.815, y: 0.98, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36747d40fbbe07f4b83096bd3935576b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plant: {fileID: 5040895237174311618, guid: 9386a03384bf273469d2cc7795e20302, type: 3}
+  plant: {fileID: 4617348193465872976, guid: 21ba2efb9575e2a4886758af38d84db1, type: 3}
   grid: {fileID: 1741156657}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
