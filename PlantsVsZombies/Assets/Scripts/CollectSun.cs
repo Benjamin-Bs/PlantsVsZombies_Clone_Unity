@@ -3,34 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 
 
 public class CollectSun : MonoBehaviour
 {
     private int sunScore = 0;
-    [SerializeField]
-    private Text mytext;
+    [SerializeField] 
+    private TMP_Text mytext;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        mytext = GetComponent<Text>();
-    }
 
     private void OnMouseDown()
     {
         sunScore += 25;
-        if (mytext != null)
-        {
-            mytext.text = "SunScore : "+ sunScore.ToString();
-        }
+        mytext.text = "SunScore : " + sunScore.ToString();
         Debug.Log(sunScore);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }
