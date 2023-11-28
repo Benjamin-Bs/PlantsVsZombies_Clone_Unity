@@ -483,7 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36747d40fbbe07f4b83096bd3935576b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plant: {fileID: 4737537633657123786, guid: 3daf1dff45e21084f8f64bca69165efa, type: 3}
+  plant: {fileID: 5040895237174311618, guid: 9386a03384bf273469d2cc7795e20302, type: 3}
   grid: {fileID: 1741156657}
 --- !u!114 &1947033961
 MonoBehaviour:
@@ -511,6 +511,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a69d280fbf54547b3bddee6abbfb4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  availablePlants:
+  - {fileID: 5040895237174311618, guid: 9386a03384bf273469d2cc7795e20302, type: 3}
+  - {fileID: 4737537633657123786, guid: 3daf1dff45e21084f8f64bca69165efa, type: 3}
+  - {fileID: 4617348193465872976, guid: 21ba2efb9575e2a4886758af38d84db1, type: 3}
+  - {fileID: 124190718861395363, guid: bdaddd46710538d46bd134b43f9ac918, type: 3}
+  - {fileID: 5165919537041667998, guid: 7db7e6baf3c20ac47bb14471c8d1a231, type: 3}
+  placer: {fileID: 1947033960}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

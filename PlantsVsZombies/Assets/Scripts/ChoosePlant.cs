@@ -1,30 +1,33 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ChoosePlant : MonoBehaviour
 {
-    public static GameObject chosenPlant;
+    [SerializeField] 
+    private GameObject[] availablePlants;
+
+    [SerializeField]
+    private PlacePlant placer;
     
+    private GameObject chosenPlant;
+    private int i = 0;
+    
+
     void Start()
     {
-        chosenPlant = Resources.Load<GameObject>("/Assets/Prefabs/Plants/Peashooter.prefab"); 
-        Debug.Log(chosenPlant);
+        chosenPlant = availablePlants[2]; 
     }
     
     void Update()
     {
         //GameObject prefabToInstantiate = Resources.Load<GameObject>("Assets/Prefabs/Plants/Peashooter.prefab");
-        if (Camera.main.ScreenToWorldPoint(Input.mousePosition).x > 0)
-        {
-            chosenPlant = Resources.Load<GameObject>("/Assets/Prefabs/Plants/Peashooter.prefab");    
-            
-        }
-        else
-        {
-            chosenPlant = Resources.Load<GameObject>("/Assets/Prefabs/Plants/Double_Peashooter.prefab");
-        }
-        Debug.Log(chosenPlant);
         
+        if (Input.GetMouseButtonDown(1))
+        {
+            placer.SetPlant(availablePlants[i]);
+            i++;
+        }
     }
 }
