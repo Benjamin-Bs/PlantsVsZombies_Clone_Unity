@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:PlantsVsZombies/Assets/Sprites/Backgrounds/Mainmenu/Screenshot_2023-11-30-11-10-39-07_8da309c642876a780a9d03b603bf1958.png.meta
 guid: 8142561c588b5cb49b62783b132a5cf9
+=======
+<<<<<<< HEAD
+guid: 09ff3c691c0f0634492cf4b83ffeacc9
+=======
+guid: f240452090317f147b24fe1bc435ab00
+>>>>>>> d3fc59cbc2b7cb2aa3e8f8971220a53330d1c4a3
+>>>>>>> 1dead6e1b78ded72c55cae4579c28a2768dd6b80:PlantsVsZombies/Assets/Sprites/Backgrounds/Mainmenu/Screenshot_2023-11-30-11-10-25-11_8da309c642876a780a9d03b603bf1958.jpg.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,6 +89,10 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+<<<<<<< HEAD:PlantsVsZombies/Assets/Sprites/Backgrounds/Mainmenu/Screenshot_2023-11-30-11-10-39-07_8da309c642876a780a9d03b603bf1958.png.meta
+=======
+<<<<<<< HEAD
+>>>>>>> 1dead6e1b78ded72c55cae4579c28a2768dd6b80:PlantsVsZombies/Assets/Sprites/Backgrounds/Mainmenu/Screenshot_2023-11-30-11-10-25-11_8da309c642876a780a9d03b603bf1958.jpg.meta
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -94,6 +106,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+<<<<<<< HEAD:PlantsVsZombies/Assets/Sprites/Backgrounds/Mainmenu/Screenshot_2023-11-30-11-10-39-07_8da309c642876a780a9d03b603bf1958.png.meta
+=======
+=======
+>>>>>>> d3fc59cbc2b7cb2aa3e8f8971220a53330d1c4a3
+>>>>>>> 1dead6e1b78ded72c55cae4579c28a2768dd6b80:PlantsVsZombies/Assets/Sprites/Backgrounds/Mainmenu/Screenshot_2023-11-30-11-10-25-11_8da309c642876a780a9d03b603bf1958.jpg.meta
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
