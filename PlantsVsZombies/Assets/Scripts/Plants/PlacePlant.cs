@@ -64,7 +64,7 @@ public class PlacePlant : MonoBehaviour
 
                         BoxCollider2D boxCollider = newPlant.AddComponent<BoxCollider2D>();
                         newPlant.layer = 6;
-                        boxCollider.size = new Vector2(1.05f, 1.3f);
+                        boxCollider.size = new Vector2(grid.cellSize.x, grid.cellSize.y);
                         Action<SpriteRenderer> function = (spriteRenderer) =>
                         {
                             spriteRenderer.sortingOrder += 10 * (10 - position.y);
