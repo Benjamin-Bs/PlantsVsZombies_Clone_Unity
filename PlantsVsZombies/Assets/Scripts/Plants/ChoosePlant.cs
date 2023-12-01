@@ -28,6 +28,11 @@ public class ChoosePlant : MonoBehaviour
         {
             placer.SetPlant(availablePlants[i]);
             i++;
+            
+            if (i >= availablePlants.Length)
+            {
+                i = 0;
+            }
         }
     }
 }

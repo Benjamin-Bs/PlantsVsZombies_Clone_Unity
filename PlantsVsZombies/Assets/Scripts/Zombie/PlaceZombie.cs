@@ -22,6 +22,7 @@ public class PlaceZombie : MonoBehaviour
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
         Vector3Int position = this.grid.WorldToCell(mousePosition);
+        position.x = 8;
         Vector3 worldPosition = this.grid.GetCellCenterWorld(position);
         worldPosition.z = 0;
         if (position.x >= 0 && position.x <= 8 && position.y >= 0 && position.y <= 4)
@@ -32,10 +33,11 @@ public class PlaceZombie : MonoBehaviour
             {
                 // place new Zombie
                 GameObject newZombie = Object.Instantiate(this.zombie, worldPosition, Quaternion.identity);
+                ZombieGo myScriptComponent = newZombie.AddComponent<ZombieGo>();
                 
                 BoxCollider2D boxCollider = newZombie.AddComponent<BoxCollider2D>();
                 newZombie.layer = 7;
-                boxCollider.size = new Vector2(10f, 10f);
+                boxCollider.size = new Vector2(grid.cellSize.x, grid.cellSize.y/2);
                 Debug.Log(boxCollider.transform.position);
                 
                 SetLayerRecursive(newZombie, 10*(10-position.y));
