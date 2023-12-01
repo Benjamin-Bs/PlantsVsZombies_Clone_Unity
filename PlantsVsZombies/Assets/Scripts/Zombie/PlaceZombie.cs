@@ -37,7 +37,7 @@ public class PlaceZombie : MonoBehaviour
                 
                 BoxCollider2D boxCollider = newZombie.AddComponent<BoxCollider2D>();
                 newZombie.layer = 7;
-                boxCollider.size = new Vector2(grid.cellSize.x, grid.cellSize.y/2);
+                boxCollider.size = new Vector2(grid.cellSize.x, grid.cellSize.y*0.7f);
                 Debug.Log(boxCollider.transform.position);
                 
                 SetLayerRecursive(newZombie, 10*(10-position.y));

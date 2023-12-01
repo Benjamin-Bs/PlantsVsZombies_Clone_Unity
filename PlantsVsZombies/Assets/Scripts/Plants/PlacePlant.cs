@@ -45,6 +45,7 @@ public class PlacePlant : MonoBehaviour
             mousePosition.z = 0;
             Vector3Int position = this.grid.WorldToCell(mousePosition);
             Vector3 worldPosition = this.grid.GetCellCenterWorld(position);
+            worldPosition.y -= 0.1f;
             worldPosition.z = 0;
             if (position.x >= 0 && position.x <= 8 && position.y >= 0 && position.y <= 4)
             {

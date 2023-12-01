@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZombieGo : MonoBehaviour
+public class StraightFlight : MonoBehaviour
 {
-    [SerializeField] private float speed = 0.5f;
+    [SerializeField] private float speed = 5f;
     
     
     void Start()
@@ -15,33 +15,18 @@ public class ZombieGo : MonoBehaviour
     
     void Update()
     {
-        if (!CheckCollisionWithLayer(6))
+        if (!CheckCollisionWithLayer(7))
         {
             //Transform myTransform = GetComponent<Transform>();
             Vector3 currentPosition = transform.position;
-            currentPosition.x -= this.speed * Time.deltaTime;
+            currentPosition.x += this.speed * Time.deltaTime;
             transform.position = currentPosition;
-            findChild("Parent").GetComponent<Animator>().SetBool("eat", false);
         }
         else
         {
-            findChild("Parent").GetComponent<Animator>().SetBool("eat", true);
+            Destroy(gameObject);
         }
 
-    }
-
-    private GameObject findChild(String name)
-    {
-        Transform childTransform = transform.Find(name);
-        GameObject childObject = null;
-        if (childTransform != null) {
-            childObject = childTransform.gameObject;
-        } else
-        {
-            childObject = gameObject;
-        }
-        return childObject;
-        
     }
     
     private bool CheckCollisionWithLayer(int layer)
