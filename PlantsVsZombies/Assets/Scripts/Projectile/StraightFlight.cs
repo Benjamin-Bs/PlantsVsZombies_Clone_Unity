@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class StraightFlight : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
+    [SerializeField] 
+    private int damage = 40;
+    [SerializeField] 
+    private float speed = 0.5f;
     
     
     void Start()
@@ -15,7 +18,8 @@ public class StraightFlight : MonoBehaviour
     
     void Update()
     {
-        if (!CheckCollisionWithLayer(7))
+        GameObject collisionObject = FindCollisionWithLayer(7);
+        if (collisionObject == null)
         {
             //Transform myTransform = GetComponent<Transform>();
             Vector3 currentPosition = transform.position;
@@ -24,12 +28,13 @@ public class StraightFlight : MonoBehaviour
         }
         else
         {
+            collisionObject.GetComponent<Health>().decreaseHealth(30);
             Destroy(gameObject);
         }
 
     }
     
-    private bool CheckCollisionWithLayer(int layer)
+    private GameObject FindCollisionWithLayer(int layer)
     {
         BoxCollider2D collider = GetComponent<BoxCollider2D>();
         Collider2D[] colliders = Physics2D.OverlapBoxAll(collider.bounds.center, collider.bounds.size, 0f);
@@ -38,9 +43,9 @@ public class StraightFlight : MonoBehaviour
         {
             if (col.gameObject.layer == layer)
             {
-                return true;
+                return col.gameObject;
             }
         }
-        return false;
+        return null;
     }
 }

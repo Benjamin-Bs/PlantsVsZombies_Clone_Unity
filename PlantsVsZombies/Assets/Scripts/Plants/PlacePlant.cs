@@ -66,6 +66,15 @@ public class PlacePlant : MonoBehaviour
                         BoxCollider2D boxCollider = newPlant.AddComponent<BoxCollider2D>();
                         newPlant.layer = 6;
                         boxCollider.size = new Vector2(grid.cellSize.x, grid.cellSize.y);
+                        
+                        // add zombie in row collider
+                        GameObject child = new GameObject("detectZombie");
+                        child.transform.parent = newPlant.transform;
+                        BoxCollider2D zombieInRowCollider = child.AddComponent<BoxCollider2D>();
+                        child.transform.position = new Vector3(worldPosition.x + grid.cellSize.x * 4, worldPosition.y,0);
+                        zombieInRowCollider.size = new Vector2(grid.cellSize.x * 9, grid.cellSize.y);
+                        child.layer = 8;
+                        
                         Action<SpriteRenderer> function = (spriteRenderer) =>
                         {
                             spriteRenderer.sortingOrder += 10 * (10 - position.y);
