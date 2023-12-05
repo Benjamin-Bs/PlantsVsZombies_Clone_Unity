@@ -22,8 +22,6 @@ public class ChoosePlant : MonoBehaviour
     
     void Update()
     {
-        //GameObject prefabToInstantiate = Resources.Load<GameObject>("Assets/Prefabs/Plants/Peashooter.prefab");
-        
         if (Input.GetMouseButtonDown(1))
         {
             placer.SetPlant(availablePlants[i]);
