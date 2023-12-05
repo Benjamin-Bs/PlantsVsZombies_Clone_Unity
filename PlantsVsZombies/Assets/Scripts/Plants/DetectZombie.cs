@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
 using Utility;
 
@@ -6,10 +7,14 @@ public class DetectZombie : MonoBehaviour
 {
     void Update()
     {
-        GameObjectUtility.findChild(gameObject, "Parent").GetComponent<Animator>().SetBool(
+        GameObject child = GameObjectUtility.findChild(gameObject, "Parent");
+        GameObject firstZombie = 
+            CollisionDetection.FindCollisionWithLayer(GameObjectUtility.findChild(gameObject, "detectZombie"), 7);
+        child.GetComponent<Animator>().SetBool(
             "hasDetectedZombie", 
-            CollisionDetection.HasCollisionWithLayer(GameObjectUtility.findChild(gameObject, "detectZombie"),7)
+            (firstZombie != null)
         );
+        child.GetComponent<ShootOnZombie>().zombie = firstZombie;
     }
     
 }
