@@ -1055,7 +1055,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb297abb9c51234f8d68ebd6087e987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1433865249898571361, guid: 7430def82cef22c42bf1c14695331f9a, type: 3}
+  projectile: {fileID: 8368051796073121911, guid: 7430def82cef22c42bf1c14695331f9a, type: 3}
+  zombie: {fileID: 0}
 --- !u!1 &6473706645832979364
 GameObject:
   m_ObjectHideFlags: 0
