@@ -16,7 +16,7 @@ public class CollectSun : MonoBehaviour
     private void OnMouseDown()
     {
         sunScore += 25;
-        mytext.text = "SunScore : " + sunScore.ToString();
+        mytext.text = sunScore.ToString();
         Debug.Log(sunScore);
 
         //gameObject.SetActive(false);
