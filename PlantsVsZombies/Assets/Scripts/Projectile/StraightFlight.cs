@@ -24,7 +24,7 @@ public class StraightFlight : MonoBehaviour
         }
         else
         {
-            collisionObject.GetComponent<Health>().decreaseHealth(30);
+            collisionObject.GetComponent<Health>().decreaseHealth(damage);
             Destroy(gameObject);    
         }
     }

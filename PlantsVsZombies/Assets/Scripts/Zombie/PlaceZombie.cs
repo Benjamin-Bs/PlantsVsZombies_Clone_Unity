@@ -42,9 +42,9 @@ public class PlaceZombie : MonoBehaviour
                 
                 ZombieGo myScriptComponent = newZombie.AddComponent<ZombieGo>();
                 
-                BoxCollider2D boxCollider = newZombie.AddComponent<BoxCollider2D>();
+                /*BoxCollider2D boxCollider = newZombie.AddComponent<BoxCollider2D>();
                 newZombie.layer = 7;
-                boxCollider.size = new Vector2(grid.cellSize.x, grid.cellSize.y);
+                boxCollider.size = new Vector2(grid.cellSize.x, grid.cellSize.y);*/
                 
                 SetLayerRecursive(newZombie, 10*(10-position.y));
             }

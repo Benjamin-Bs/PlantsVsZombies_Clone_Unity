@@ -745,9 +745,9 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.6666667
-    functionName: Shoot1Projectile
+    functionName: Shoot2ProjectilesAlternating
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 7590529187481953835, guid: 1a0ea48f12a12f04e809228e4f47939f, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

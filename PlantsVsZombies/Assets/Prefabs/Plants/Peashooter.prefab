@@ -749,6 +749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6036789166581156580}
   - component: {fileID: 684667019316613625}
+  - component: {fileID: -4714189691748073741}
   m_Layer: 0
   m_Name: Peashooter
   m_TagString: Untagged
@@ -784,6 +785,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a75852b0f147978e17f0e5d2f682c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4714189691748073741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4617348193465872976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1760138bab2771446afa1f57f2359976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 120
 --- !u!1 &5717110340574694979
 GameObject:
   m_ObjectHideFlags: 0
