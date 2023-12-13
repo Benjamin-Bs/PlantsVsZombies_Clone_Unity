@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
+using Object = UnityEngine.Object;
+using Random = System.Random;
 
 public class ShootOnZombie : MonoBehaviour
 {
@@ -14,13 +13,12 @@ public class ShootOnZombie : MonoBehaviour
     {
         placeProjectile(projectile);
     }
-
-    private int counter;
-    public void Shoot2ProjectilesAlternating(GameObject secondaryObject, int firstTime, int length)
+    
+    public void Shoot2ProjectilesAlternating(GameObject secondaryObject)
     {
-        GameObject chosenObject = (counter%firstTime < length) ? projectile : secondaryObject;
+        Random random = new Random();
+        GameObject chosenObject = random.Next(0, 4) != 0 ? projectile : secondaryObject;
         placeProjectile(chosenObject);
-        counter++;
     }
 
     private void placeProjectile(GameObject chosenPrefab)
@@ -34,7 +32,7 @@ public class ShootOnZombie : MonoBehaviour
         CurvedFlight curvedFlight = instance.GetComponent<CurvedFlight>();
         if (curvedFlight != null)
         {
-            curvedFlight.zombie = this.zombie;
+            curvedFlight.Zombie = this.zombie;
         }
     }
 }
