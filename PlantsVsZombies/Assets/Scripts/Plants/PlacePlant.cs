@@ -18,19 +18,24 @@ public class PlacePlant : MonoBehaviour
     
     public void SetPlant(GameObject plant)
     {
-        this.plant = plant;
+        this.plant = (this.plant == plant) ? null : plant;
+        
         if (this.myIndicator != null)
         {
-            Object.Destroy(this.myIndicator.gameObject); 
+            Object.Destroy(this.myIndicator.gameObject);
         }
-        this.myIndicator = Object.Instantiate(this.plant);
-        Action<SpriteRenderer> function = spriteRenderer =>
+
+        if (this.plant != null)
         {
-            Color color = spriteRenderer.color;
-            color.a = 0.5f;
-            spriteRenderer.color = color;
-        };
-        GameObjectUtility.SetRecursive(myIndicator.gameObject ,function);
+            this.myIndicator = Object.Instantiate(this.plant);
+            Action<SpriteRenderer> function = spriteRenderer =>
+            {
+                Color color = spriteRenderer.color;
+                color.a = 0.5f;
+                spriteRenderer.color = color;
+            };
+            GameObjectUtility.SetRecursive(myIndicator.gameObject, function);
+        }
     }
     
     void Update()

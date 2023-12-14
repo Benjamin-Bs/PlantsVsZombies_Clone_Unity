@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,14 +10,23 @@ public class setPackPlant : MonoBehaviour
     [SerializeField] 
     private GameObject plant;
     
+    [SerializeField]
+    private PlacePlant placer;
+    
     // Start is called before the first frame update
     void Start()
     {
-        GameObjectUtility.findChild(gameObject, "Icon").GetComponent<SpriteRenderer>().sprite = plant.GetComponent<setPlantInformation>().icon;
+        GameObject icon = GameObjectUtility.findChild(gameObject, "Icon");
+        icon.GetComponent<SpriteRenderer>().sprite = plant.GetComponent<setPlantInformation>().icon;
 
         GameObject canvas = GameObjectUtility.findChild(gameObject, "Canvas");
         GameObject costText = GameObjectUtility.findChild(canvas, "CostText");
         costText.GetComponent<TextMeshProUGUI>().text = plant.GetComponent<setPlantInformation>().cost.ToString();
+    }
+
+    private void OnMouseDown()
+    {
+        placer.SetPlant(plant);
     }
 
     // Update is called once per frame
