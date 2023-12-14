@@ -955,6 +955,7 @@ GameObject:
   - component: {fileID: 3809043071019748059}
   - component: {fileID: 7513494081419029367}
   - component: {fileID: 5929885581766857886}
+  - component: {fileID: 4332713078077533218}
   m_Layer: 0
   m_Name: Double_Peashooter
   m_TagString: Untagged
@@ -1003,6 +1004,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 120
+--- !u!114 &4332713078077533218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4737537633657123786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0c969ca5b47da4796b1fc31c1cab13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 1865963408, guid: ca6a28bab3ea8c248b5a9e116a54a609, type: 3}
+  cost: 150
 --- !u!1 &4912658690823896298
 GameObject:
   m_ObjectHideFlags: 0

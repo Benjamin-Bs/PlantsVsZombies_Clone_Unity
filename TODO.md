@@ -4,6 +4,8 @@ Jonas:
 
 - Zombie bar erstellen und im Code integrieren![Progress bar | Plants vs. Zombies Wiki | Fandom](https://static.wikia.nocookie.net/plantsvszombies/images/3/37/Progress_Bar_PvZ1.PNG/revision/latest?cb=20160522102524)
 
+- Rasenmäher animieren
+
 Felix:
 
 - Zombie bearbeiten
@@ -18,7 +20,7 @@ Benjamin:
 
 - Selectbar einbinden in der Main Scene und mit Code verbinden
 
-- Hilfe bei Zombie bar
+- Rasenmäher zum Bewegen bringen (Code)
 
 Adrian:
 

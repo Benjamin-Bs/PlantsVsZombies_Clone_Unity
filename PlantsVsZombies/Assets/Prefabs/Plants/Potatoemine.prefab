@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6623439482658108013}
   - component: {fileID: 4315993919020738584}
   - component: {fileID: 1105692939247081774}
+  - component: {fileID: -4084958678111477849}
   m_Layer: 0
   m_Name: Potatoemine
   m_TagString: Untagged
@@ -70,6 +71,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 60
+--- !u!114 &-4084958678111477849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124190718861395363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0c969ca5b47da4796b1fc31c1cab13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 689441658, guid: ca6a28bab3ea8c248b5a9e116a54a609, type: 3}
+  cost: 25
 --- !u!1 &271341353263102984
 GameObject:
   m_ObjectHideFlags: 0

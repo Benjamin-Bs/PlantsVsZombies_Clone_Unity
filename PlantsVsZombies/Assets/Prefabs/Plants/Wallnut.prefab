@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 3123159570628721957}
   - component: {fileID: 6886801845702654753}
   - component: {fileID: 8387502928320687109}
+  - component: {fileID: 5398765806025731210}
   m_Layer: 0
   m_Name: Wallnut
   m_TagString: Untagged
@@ -154,6 +155,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 250
+--- !u!114 &5398765806025731210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5165919537041667998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0c969ca5b47da4796b1fc31c1cab13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: -1716312694, guid: ca6a28bab3ea8c248b5a9e116a54a609, type: 3}
+  cost: 50
 --- !u!1 &7337968386468412500
 GameObject:
   m_ObjectHideFlags: 0
