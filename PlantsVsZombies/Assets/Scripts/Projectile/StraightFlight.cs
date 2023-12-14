@@ -2,20 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utility;
 
 public class StraightFlight : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
+    [SerializeField] 
+    private int damage = 40;
+    [SerializeField] 
+    private float speed = 0.5f;
     
-    
-    void Start()
-    {
-        
-    }
     
     void Update()
     {
-        if (!CheckCollisionWithLayer(7))
+        GameObject collisionObject = CollisionDetection.FindCollisionWithLayer(gameObject,7);
+        if (collisionObject == null || collisionObject.transform.position.z != transform.position.z)
         {
             //Transform myTransform = GetComponent<Transform>();
             Vector3 currentPosition = transform.position;
@@ -24,23 +24,8 @@ public class StraightFlight : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            collisionObject.GetComponent<Health>().decreaseHealth(damage);
+            Destroy(gameObject);    
         }
-
-    }
-    
-    private bool CheckCollisionWithLayer(int layer)
-    {
-        BoxCollider2D collider = GetComponent<BoxCollider2D>();
-        Collider2D[] colliders = Physics2D.OverlapBoxAll(collider.bounds.center, collider.bounds.size, 0f);
-        
-        foreach (Collider2D col in colliders)
-        {
-            if (col.gameObject.layer == layer)
-            {
-                return true;
-            }
-        }
-        return false;
     }
 }

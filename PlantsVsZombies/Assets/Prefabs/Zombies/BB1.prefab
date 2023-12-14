@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7659165718197187625}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontLL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3905296938389463681}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 436137114454378970}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: New LimbSolver2D_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 179388966475781318}
   - component: {fileID: 344819492047256800}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackArmLimbSolver2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4042605979677657115}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackShoe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3936093802675693243}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 696220377330032579}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontLA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3604729873117038652}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,9 @@ GameObject:
   - component: {fileID: 5307924734454396110}
   - component: {fileID: 1597333682072017187}
   - component: {fileID: 6254471649982138688}
-  m_Layer: 0
+  - component: {fileID: 3983205379485953382}
+  - component: {fileID: 1764583522045337947}
+  m_Layer: 7
   m_Name: BB1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,6 +445,64 @@ MonoBehaviour:
     showGizmo: 1
   - color: {r: 0, g: 1, b: 0, a: 1}
     showGizmo: 1
+--- !u!114 &3983205379485953382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3384771196990522969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1760138bab2771446afa1f57f2359976, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 200
+--- !u!61 &1764583522045337947
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3384771196990522969}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.12454614, y: 0.6413369}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.76, y: 4.6}
+    newSize: {x: 2.76, y: 4.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.91401726, y: 1.5201417}
+  m_EdgeRadius: 0
 --- !u!1 &3423952338874956880
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3052312496581602268}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackArmLimbSolver2D_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4452623771890182404}
   - component: {fileID: 533487026800456326}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontArmLimbSolver2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +608,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3633627726163137122}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackLL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,7 +641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5333785514843786537}
   - component: {fileID: 963628333427485094}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackLegLimbSolver2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,7 +705,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3615938434685327275}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -677,7 +737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 668806193958055005}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontArmLimbSolver2D_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -708,7 +768,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7186062847324055982}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +799,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7318430904999972738}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackUA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -772,7 +832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6496426416297387645}
   - component: {fileID: 514090708146888623}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontUA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -825,7 +885,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2598169000736039765}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Jaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -857,7 +917,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8920659463639872475}
   - component: {fileID: 1922013803496145677}
-  m_Layer: 0
+  - component: {fileID: 6328034792050525426}
+  m_Layer: 7
   m_Name: Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -905,6 +966,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6328034792050525426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6946888044350151968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ea5bdd68dfb9d499fe8827da9d8984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  plant: {fileID: 0}
 --- !u!1 &6951638745990692454
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,7 +990,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4912244763091552859}
   - component: {fileID: 5835730590486238394}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontLegLimbSolver2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -979,7 +1054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5386465933840746386}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackUL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1011,7 +1086,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2485318144991791461}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontUL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1043,7 +1118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8787562209280810768}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1078,7 +1153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5141283865875425745}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontShoe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1109,7 +1184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1773355779578747971}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackLegLimbSolver2D_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1140,7 +1215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5216588666075449944}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BackLA
   m_TagString: Untagged
   m_Icon: {fileID: 0}

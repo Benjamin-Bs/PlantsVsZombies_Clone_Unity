@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utility;
+using Object = UnityEngine.Object;
 
 public class PlaceZombie : MonoBehaviour
 {
@@ -33,12 +36,15 @@ public class PlaceZombie : MonoBehaviour
             {
                 // place new Zombie
                 GameObject newZombie = Object.Instantiate(this.zombie, worldPosition, Quaternion.identity);
+                Vector3 vector3 = newZombie.transform.position;
+                vector3.z = -5+position.y;
+                newZombie.transform.position = vector3;
+                
                 ZombieGo myScriptComponent = newZombie.AddComponent<ZombieGo>();
                 
-                BoxCollider2D boxCollider = newZombie.AddComponent<BoxCollider2D>();
+                /*BoxCollider2D boxCollider = newZombie.AddComponent<BoxCollider2D>();
                 newZombie.layer = 7;
-                boxCollider.size = new Vector2(grid.cellSize.x, grid.cellSize.y*0.7f);
-                Debug.Log(boxCollider.transform.position);
+                boxCollider.size = new Vector2(grid.cellSize.x, grid.cellSize.y);*/
                 
                 SetLayerRecursive(newZombie, 10*(10-position.y));
             }
@@ -47,18 +53,10 @@ public class PlaceZombie : MonoBehaviour
     
     void SetLayerRecursive(GameObject obj, int layer)
     {
-        // Set the layer for the current GameObject
-        
-        SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
-        if (spriteRenderer != null)
+        Action<SpriteRenderer> function = spriteRenderer =>
         {
             spriteRenderer.sortingOrder += layer;
-        }
-
-        // Iterate through all children and set their layers
-        foreach (Transform child in obj.transform)
-        {
-            SetLayerRecursive(child.gameObject, layer);
-        }
+        };
+        GameObjectUtility.SetRecursive(obj, function);
     }
 }
