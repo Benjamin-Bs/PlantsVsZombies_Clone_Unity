@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1872635394572619571}
   - component: {fileID: 7748367178628044056}
-  - component: {fileID: 654771415779351460}
+  - component: {fileID: -2394546161924183734}
   m_Layer: 0
   m_Name: Corn
   m_TagString: Untagged
@@ -27,7 +27,11 @@ Transform:
   m_GameObject: {fileID: 6237558112033843807}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -3.2925, y: 1.4310522, z: -2.0061765}
+=======
+  m_LocalPosition: {x: -2.4775, y: 0.4510522, z: -3}
+>>>>>>> a41eaf7de4f5274a83b9a92740511a6fe7dc70f0
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -79,7 +83,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &654771415779351460
+--- !u!114 &-2394546161924183734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,11 +92,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6237558112033843807}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c46ede052374f941907c8c6f518a17d, type: 3}
+  m_Script: {fileID: 11500000, guid: b88ba6fce22304f45b1124b2172ba23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 40
-  speed: 5
+  height: 3
 --- !u!1 &8691204012364907870
 GameObject:
   m_ObjectHideFlags: 0

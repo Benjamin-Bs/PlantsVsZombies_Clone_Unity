@@ -6,11 +6,12 @@ using Utility;
 
 public class ZombieGo : MonoBehaviour
 {
-    [SerializeField] private float speed = 0.5f;
+    [SerializeField] public float speed = 0.5f;
     
     void Update()
     {
-        bool hasCollision = CollisionDetection.HasCollisionWithLayer(gameObject, 6);
+        GameObject collisionObject = CollisionDetection.FindCollisionWithLayer(gameObject, 6);
+        bool hasCollision = collisionObject != null;
         if (!hasCollision)
         {
             //Transform myTransform = GetComponent<Transform>();
@@ -18,6 +19,9 @@ public class ZombieGo : MonoBehaviour
             currentPosition.x -= this.speed * Time.deltaTime;
             transform.position = currentPosition;
         }
-        GameObjectUtility.findChild(gameObject,"Parent").GetComponent<Animator>().SetBool("eat", hasCollision);
+
+        GameObject child = GameObjectUtility.findChild(gameObject, "Parent");
+        child.GetComponent<eatPlant>().plant = collisionObject;
+        child.GetComponent<Animator>().SetBool("eat", hasCollision);
     }
 }
