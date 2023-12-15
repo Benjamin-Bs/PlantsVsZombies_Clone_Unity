@@ -12,7 +12,10 @@ public class eatPlant : MonoBehaviour
 
     public void eat()
     {
-        plant.GetComponent<Health>().decreaseHealth(damage);
+        if (plant != null)
+        {
+            plant.GetComponent<Health>().decreaseHealth(damage);
+        }
     }
     
 }

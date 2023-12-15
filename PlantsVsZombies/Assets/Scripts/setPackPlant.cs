@@ -10,9 +10,13 @@ public class setPackPlant : MonoBehaviour
     [SerializeField] 
     private GameObject plant;
     
-    [SerializeField]
     private PlacePlant placer;
-    
+
+    private void Awake()
+    {
+        placer = GameObject.Find("Controller").GetComponent<PlacePlant>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {

@@ -13,14 +13,14 @@ public class PlaceZombie : MonoBehaviour
     [SerializeField] 
     private Grid grid;
     
-    private GameObject myIndicator;
+    //private GameObject myIndicator;
 
     
-    private void Start() {
+    /*private void Start() {
         this.myIndicator = Object.Instantiate(this.zombie);
-    }
+    }*/
     
-    void Update()
+    /*void Update()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;
@@ -44,11 +44,38 @@ public class PlaceZombie : MonoBehaviour
                 
                 /*BoxCollider2D boxCollider = newZombie.AddComponent<BoxCollider2D>();
                 newZombie.layer = 7;
-                boxCollider.size = new Vector2(grid.cellSize.x, grid.cellSize.y);*/
+                boxCollider.size = new Vector2(grid.cellSize.x, grid.cellSize.y);*
                 
                 SetLayerRecursive(newZombie, 10*(10-position.y));
             }
         }
+    }*/
+
+    public void place(int row)
+    {
+        
+        Vector3Int position = new Vector3Int(8, row, 0);
+        Vector3 worldPosition = this.grid.GetCellCenterWorld(position);
+        worldPosition.z = 0;
+        
+        //this.myIndicator.transform.position = worldPosition;
+
+        
+        // place new Zombie
+        GameObject newZombie = Object.Instantiate(this.zombie, worldPosition, Quaternion.identity);
+        Vector3 vector3 = newZombie.transform.position;
+        vector3.z = -5+position.y;
+        newZombie.transform.position = vector3;
+        
+        ZombieGo myScriptComponent = newZombie.AddComponent<ZombieGo>();
+        
+        /*BoxCollider2D boxCollider = newZombie.AddComponent<BoxCollider2D>();
+        newZombie.layer = 7;
+        boxCollider.size = new Vector2(grid.cellSize.x, grid.cellSize.y);*/
+        
+        SetLayerRecursive(newZombie, 10*(10-position.y));
+        
+        
     }
     
     void SetLayerRecursive(GameObject obj, int layer)

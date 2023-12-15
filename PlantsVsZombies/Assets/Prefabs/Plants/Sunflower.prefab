@@ -214,7 +214,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 162919752352022714}
-  - component: {fileID: 5159174815996864114}
   - component: {fileID: 7669071552188762875}
   - component: {fileID: 1666263105921021853}
   m_Layer: 0
@@ -240,27 +239,6 @@ Transform:
   - {fileID: 7875186044146927605}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &5159174815996864114
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3167215980373178649}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0ca113e59ff5d3b45b0fafa5689c3c97, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &7669071552188762875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -984,6 +962,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7875186044146927605}
+  - component: {fileID: 7018062093717377471}
+  - component: {fileID: 5346020577254216278}
   m_Layer: 0
   m_Name: Parent
   m_TagString: Untagged
@@ -1008,6 +988,40 @@ Transform:
   - {fileID: 4983995715753204371}
   m_Father: {fileID: 162919752352022714}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &7018062093717377471
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6937311883118415305}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0ca113e59ff5d3b45b0fafa5689c3c97, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5346020577254216278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6937311883118415305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4325dded8b2a13847a44d07a5a669d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sun: {fileID: 8404242888436509127, guid: 1d4b39b8834e21949ba3b7ea73c1c89b, type: 3}
 --- !u!1 &7167267291016900045
 GameObject:
   m_ObjectHideFlags: 0

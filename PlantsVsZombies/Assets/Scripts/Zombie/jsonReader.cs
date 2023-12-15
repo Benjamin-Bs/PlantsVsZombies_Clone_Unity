@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,8 +7,8 @@ using UnityEngine;
 public class Zombie {
     //these variables are case sensitive and must match the strings "firstName" and "lastName" in the JSON.
     public string type;
-    public string row;
-    public string time;
+    public int row;
+    public float time;
 }
 
 [System.Serializable]
@@ -16,14 +17,37 @@ public class Zombies {
     public Zombie[] zombies;
 }
 
-public class JSONReader : MonoBehaviour {
-    public TextAsset jsonFile;
-    void Start() {
+public class jsonReader : MonoBehaviour
+{
+    [SerializeField] 
+    private TextAsset jsonFile;
+
+    [SerializeField] 
+    private PlaceZombie placer;
+
+    private float timer = 0;
+    private Zombie[] zombieArray;
+    private int nextIndex = 0;
+
+    void Start()
+    {
         Zombies zombiesInJson = JsonUtility.FromJson<Zombies>(jsonFile.text);
-     
-        foreach (Zombie zombie in employeesInJson.employees) {
-            Debug.Log("Found zombie: " + zombie.type + " " + zombie.row);
+
+        zombieArray = (Zombie[])zombiesInJson.zombies.Clone();
+        
+        foreach (Zombie zombie in zombiesInJson.zombies)
+        {
+            float delay = zombie.time - Time.time;
+            Invoke("PlaceZombie", delay);
         }
+    }
+
+    private void PlaceZombie()
+    {
+        Zombie currentZombie = zombieArray[nextIndex];
+        placer.place(currentZombie.row);
+        Debug.Log(Time.time);
+        nextIndex++;
     }
 }
 
