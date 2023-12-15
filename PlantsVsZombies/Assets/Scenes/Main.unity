@@ -651,6 +651,7 @@ GameObject:
   - component: {fileID: 1947033961}
   - component: {fileID: 1947033962}
   - component: {fileID: 1947033963}
+  - component: {fileID: 1947033964}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -731,6 +732,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jsonFile: {fileID: 4900000, guid: 66d96e79636e1b943bd4c8f4dff574e6, type: 3}
   placer: {fileID: 1947033961}
+--- !u!114 &1947033964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947033958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b76158051725d6a4b93e8de2fb6ac616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mower: {fileID: 688698841096095263, guid: a3268c4c7fdbdd94daa6320d9d3af90e, type: 3}
+  grid: {fileID: 1741156657}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

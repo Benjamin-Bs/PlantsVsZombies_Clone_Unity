@@ -1,21 +1,45 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utility;
 
 public class moveMower : MonoBehaviour
 {
-    public float speed = 5f; // Geschwindigkeit der Bewegung
+    [SerializeField] 
+    private float speed = 5f;
+
+    [SerializeField]
+    private Animator animator;
+
+    private bool hasCollided;
 
     void Update()
     {
-        // Bewegung in horizontaler Richtung
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        GameObject collisionObject = CollisionDetection.FindCollisionWithLayer(gameObject, 7);
 
-        // Berechne die Verschiebung
-        Vector3 movement = new Vector3(horizontalInput, verticalInput, 0f) * speed * Time.deltaTime;
-
-        // Bewege das Objekt
-        transform.Translate(movement);
+        if (!(collisionObject == null || collisionObject.transform.position.z != transform.position.z))
+        {
+            hasCollided = true;
+            animator.SetBool("started",true);
+            
+            //Transform myTransform = GetComponent<Transform>();
+            collisionObject.GetComponent<Health>().kill();
+        }
+        
+        if (hasCollided)
+        {
+            move();
+        }
     }
+
+    public void move()
+    {
+        Vector3 currentPosition = transform.position;
+        currentPosition.x += this.speed * Time.deltaTime;
+        transform.position = currentPosition;
+    }
+    
+    
+    
 }
