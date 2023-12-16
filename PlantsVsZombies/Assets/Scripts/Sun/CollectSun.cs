@@ -7,18 +7,16 @@ using Utility;
 public class CollectSun : MonoBehaviour
 {
     
-    private GameObject score;
+    private Money money;
     
     private void Awake()
     {
-        score = GameObject.Find("Score");
+        money = GameObject.Find("Selectbar").GetComponent<Money>();
     }
     
     private void OnMouseDown()
     {
-        TextMeshProUGUI textMesh = score.GetComponent<TextMeshProUGUI>();
-        Debug.Log((int.Parse(textMesh.text)+25).ToString());
-        textMesh.text = (int.Parse(textMesh.text)+25).ToString();
+        money.increase(25);
 
         //gameObject.SetActive(false);
         Destroy(gameObject);

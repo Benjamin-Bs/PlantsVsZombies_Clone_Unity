@@ -10,8 +10,11 @@ public class SpawnSun : MonoBehaviour
     
     void spawn()
     {
+        
         GameObject instance = Instantiate(sun);
+        
         Vector3 vector3 = gameObject.transform.position;
-        instance.transform.position = vector3;
+        VectorUtility.setX(instance, vector3.x + Random.Range(-0.2f, 0.2f));
+        VectorUtility.setY(instance, vector3.y + Random.Range(-0.2f, 0.2f));
     }
 }

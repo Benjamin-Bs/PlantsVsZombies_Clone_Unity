@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using Utility;
@@ -12,14 +13,21 @@ public class PlacePlant : MonoBehaviour
 
     [SerializeField] 
     private Grid grid;
+
+    [SerializeField]
+    private Money money;
     
     private GameObject myIndicator;
     private int range = 8;
+
+    
+    
     
     public void SetPlant(GameObject plant)
     {
-        this.plant = (this.plant == plant) ? null : plant;
         
+        this.plant = (this.plant == plant) ? null : plant;
+
         if (this.myIndicator != null)
         {
             Object.Destroy(this.myIndicator.gameObject);
@@ -27,14 +35,17 @@ public class PlacePlant : MonoBehaviour
 
         if (this.plant != null)
         {
-            this.myIndicator = Object.Instantiate(this.plant);
-            Action<SpriteRenderer> function = spriteRenderer =>
+            if (money.canDecrease(this.plant.GetComponent<setPlantInformation>().cost))
             {
-                Color color = spriteRenderer.color;
-                color.a = 0.5f;
-                spriteRenderer.color = color;
-            };
-            GameObjectUtility.SetRecursive(myIndicator.gameObject, function);
+                this.myIndicator = Object.Instantiate(this.plant);
+                Action<SpriteRenderer> function = spriteRenderer =>
+                {
+                    Color color = spriteRenderer.color;
+                    color.a = 0.5f;
+                    spriteRenderer.color = color;
+                };
+                GameObjectUtility.SetRecursive(myIndicator.gameObject, function);
+            }
         }
     }
     
@@ -53,33 +64,47 @@ public class PlacePlant : MonoBehaviour
             {
                 if (!hitsLayer(6))
                 {
-                    this.myIndicator.transform.position = worldPosition;
+                    if (myIndicator != null)
+                    {
+                        myIndicator.transform.position = worldPosition;
+                    }
+                    
 
                     if (Input.GetMouseButtonDown(0))
                     {
-                        // place new Plant
-                        GameObject newPlant = Object.Instantiate(plant, worldPosition, Quaternion.identity);
-                        VectorUtility.setZ(newPlant, -5+position.y);
-
-                        // add hitbox (collider)
-                        BoxCollider2D boxCollider = newPlant.AddComponent<BoxCollider2D>();
-                        newPlant.layer = 6;
-                        boxCollider.size = new Vector2(grid.cellSize.x, grid.cellSize.y);
-                        
-                        // add zombieInRow collider
-                        GameObject child = new GameObject("detectZombie");
-                        child.transform.parent = newPlant.transform;
-                        BoxCollider2D zombieInRowCollider = child.AddComponent<BoxCollider2D>();
-                        child.transform.position = new Vector3(worldPosition.x + grid.cellSize.x * range/2, worldPosition.y,-5+position.y);
-                        zombieInRowCollider.size = new Vector2(grid.cellSize.x * (range + 1), grid.cellSize.y);
-                        child.layer = 8;
-                        
-                        Action<SpriteRenderer> function = (spriteRenderer) =>
+                        try
                         {
-                            spriteRenderer.sortingOrder += 10 * (10 - position.y);
-                        };
-                        GameObjectUtility.SetRecursive(newPlant, function);
+                            money.decrease(plant.GetComponent<setPlantInformation>().cost);
+                            
+                            // place new Plant
+                            GameObject newPlant = Object.Instantiate(plant, worldPosition, Quaternion.identity);
+                            VectorUtility.setZ(newPlant, -5+position.y);
 
+                            // add hitbox (collider)
+                            BoxCollider2D boxCollider = newPlant.AddComponent<BoxCollider2D>();
+                            newPlant.layer = 6;
+                            boxCollider.size = new Vector2(grid.cellSize.x + 0.02f, grid.cellSize.y + 0.02f);
+                        
+                            // add zombieInRow collider
+                            GameObject child = new GameObject("detectZombie");
+                            child.transform.parent = newPlant.transform;
+                            BoxCollider2D zombieInRowCollider = child.AddComponent<BoxCollider2D>();
+                            child.transform.position = new Vector3(worldPosition.x + grid.cellSize.x * range/2, worldPosition.y,-5+position.y);
+                            zombieInRowCollider.size = new Vector2(grid.cellSize.x * (range + 1), grid.cellSize.y);
+                            child.layer = 8;
+                        
+                            Action<SpriteRenderer> function = (spriteRenderer) =>
+                            {
+                                spriteRenderer.sortingOrder += 10 * (10 - position.y);
+                            };
+                            GameObjectUtility.SetRecursive(newPlant, function);
+                            
+                            SetPlant(null);
+                        }
+                        catch (MoneyException)
+                        {
+                            //do nothing
+                        }
                     }
                 }
             }

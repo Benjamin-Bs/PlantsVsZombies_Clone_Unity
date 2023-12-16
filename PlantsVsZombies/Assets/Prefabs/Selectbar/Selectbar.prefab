@@ -246,6 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1754814256435792353}
   - component: {fileID: 3029246161237613832}
+  - component: {fileID: 7188023039478639696}
   m_Layer: 0
   m_Name: Selectbar
   m_TagString: Untagged
@@ -328,6 +329,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7188023039478639696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688256772808301174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011f6254e779aee478a202ee0b72992f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &69341393114873737
 PrefabInstance:
   m_ObjectHideFlags: 0
