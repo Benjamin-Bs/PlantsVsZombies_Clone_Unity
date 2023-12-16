@@ -26,9 +26,9 @@ public class ShootOnZombie : MonoBehaviour
         Vector3 vector = gameObject.transform.position;
         vector.x += 0.4f;
         vector.y += 0.45f;
-        chosenPrefab.transform.position = vector;
         
         GameObject instance = Object.Instantiate(chosenPrefab);
+        instance.transform.position = vector;
         CurvedFlight curvedFlight = instance.GetComponent<CurvedFlight>();
         if (curvedFlight != null)
         {
