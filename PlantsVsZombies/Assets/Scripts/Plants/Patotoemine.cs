@@ -10,8 +10,8 @@ public class Patotoemine : MonoBehaviour
 
     private int mode = 0;
     private DateTime placetime;
-    private DateTime detonatedtime;
     private bool hascollided;
+    private GameObject collisionObject;
     
     void Start()
     {
@@ -23,12 +23,11 @@ public class Patotoemine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject collisionObject = CollisionDetection.FindCollisionWithLayer(gameObject, 7);
+       collisionObject = CollisionDetection.FindCollisionWithLayer(gameObject, 7);
 
         if (!(collisionObject == null || collisionObject.transform.position.z != transform.position.z))
         {
             hascollided = true;
-            collisionObject.GetComponent<Health>().kill();
         }
         
         if (animator != null)
@@ -44,18 +43,20 @@ public class Patotoemine : MonoBehaviour
             {
                 animator.SetTrigger("Explode");
                 mode++;
-                detonatedtime = DateTime.Now;
-                Invoke("destroy",2);
             }
         }
 
         
     }
 
+    void killZombie()
+    {
+        collisionObject.GetComponent<Health>().kill();
+    }
+    
     void destroy()
     {
         Destroy(gameObject);
     }
-    
     
 }

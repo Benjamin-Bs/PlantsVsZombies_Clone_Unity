@@ -5,7 +5,7 @@ using Utility;
 
 public class Money : MonoBehaviour
 {
-    private int money = 50;
+    private int money = 400;
     private TextMeshProUGUI moneyField;
     private void Awake()
     {
