@@ -26,6 +26,19 @@ namespace Utility
             vectorObject.transform.position = vector3;
         }
 
-
+        public static void increaseX(GameObject vectorObject, float x)
+        {
+            setX(vectorObject, vectorObject.transform.position.x + x);
+        }
+        
+        public static void increaseY(GameObject vectorObject, float y)
+        {
+            setY(vectorObject, vectorObject.transform.position.y + y);
+        }
+        
+        public static void increaseZ(GameObject vectorObject, float z)
+        {
+            setZ(vectorObject, vectorObject.transform.position.z + z);
+        }
     }
 }

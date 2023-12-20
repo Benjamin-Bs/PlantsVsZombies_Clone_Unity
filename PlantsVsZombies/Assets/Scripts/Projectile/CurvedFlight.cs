@@ -12,6 +12,9 @@ public class CurvedFlight : MonoBehaviour
     [SerializeField] 
     private float height = 3;
 
+    [SerializeField]
+    private float startX = 0;
+
     private GameObject zombie;
     public GameObject Zombie 
     {
@@ -37,6 +40,7 @@ public class CurvedFlight : MonoBehaviour
     {
         if (zombie != null)
         {
+            VectorUtility.increaseX(gameObject, startX);
             this.time = speedY/GRAVITY;
             this.speedX = (zombie.transform.position.x - (zombie.GetComponent<ZombieGo>().speed / 2) - transform.position.x) * time;
         }

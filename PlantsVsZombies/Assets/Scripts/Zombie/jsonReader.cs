@@ -46,7 +46,6 @@ public class jsonReader : MonoBehaviour
     {
         Zombie currentZombie = zombieArray[nextIndex];
         placer.place(currentZombie.row);
-        Debug.Log(Time.time);
         nextIndex++;
     }
 }

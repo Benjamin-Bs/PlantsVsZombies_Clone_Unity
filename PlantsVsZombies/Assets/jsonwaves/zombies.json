@@ -9,7 +9,7 @@
         {
           "type": "bb",
           "row": 3,
-          "time": 7
+          "time": 27
         },
         {
           "type": "bb",
@@ -20,6 +20,26 @@
           "type": "bb",
           "row": 2,
 		  "time": 10
+        },
+        {
+          "type": "bb",
+          "row": 1,
+          "time": 21
+        },
+        {
+          "type": "bb",
+          "row": 3,
+          "time": 17
+        },
+        {
+          "type": "bb",
+          "row": 0,
+          "time": 17.5
+        },
+        {
+          "type": "bb",
+          "row": 0,
+          "time": 10
         }
       ]
     }

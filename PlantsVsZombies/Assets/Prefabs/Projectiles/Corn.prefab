@@ -93,6 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 40
   height: 3
+  startX: -1
 --- !u!1 &8691204012364907870
 GameObject:
   m_ObjectHideFlags: 0
