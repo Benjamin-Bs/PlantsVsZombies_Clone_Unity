@@ -37,7 +37,7 @@ public class jsonReader : MonoBehaviour
         
         foreach (Zombie zombie in zombiesInJson.zombies)
         {
-            float delay = zombie.time - Time.time;
+            float delay = zombie.time;
             Invoke("PlaceZombie", delay);
         }
     }

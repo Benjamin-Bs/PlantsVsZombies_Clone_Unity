@@ -6,16 +6,21 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class GraveyardButtonClicked : MonoBehaviour
 {
-    [SerializeField] private GameObject glowingGraveyardButton;
+    [SerializeField] 
+    private GameObject glowingGraveyardButton;
+    [SerializeField] 
+    private String sceneName;
     private Button button;
     private float pressTime;
     private bool delayStarted = false;
     private readonly float DELAY = 0.6f;
     private float delayTimer = 0;
     private bool buttonReleased = false;
+    
 
     void Start()
     {
@@ -44,6 +49,7 @@ public class GraveyardButtonClicked : MonoBehaviour
     void OnButtonRelease()
     {
         buttonReleased = true;
+        SceneManager.LoadScene(sceneName);
     }
 
     private void Update()

@@ -1288,6 +1288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glowingGraveyardButton: {fileID: 281144568}
+  sceneName: Main
 --- !u!114 &1532900382
 MonoBehaviour:
   m_ObjectHideFlags: 0
