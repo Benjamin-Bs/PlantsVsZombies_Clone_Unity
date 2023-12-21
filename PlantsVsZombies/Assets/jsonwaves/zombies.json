@@ -4,42 +4,57 @@
         {
           "type": "bb",
           "row": 1,
-		  "time": 1
-        },
-        {
-          "type": "bb",
-          "row": 3,
-          "time": 27
-        },
-        {
-          "type": "bb",
-          "row": 0,
-          "time": 7.5
-        },
-        {
-          "type": "bb",
-          "row": 2,
 		  "time": 10
         },
         {
           "type": "bb",
+          "row": 3,
+          "time": 38
+        },
+        {
+          "type": "bb",
+          "row": 0,
+          "time": 15
+        },
+        {
+          "type": "bb",
+          "row": 2,
+		  "time": 33
+        },
+        {
+          "type": "bb",
           "row": 1,
-          "time": 21
+          "time": 25
         },
         {
           "type": "bb",
           "row": 3,
-          "time": 17
+          "time": 30
+        },
+        {
+          "type": "bb",
+          "row": 4,
+          "time": 42
         },
         {
           "type": "bb",
           "row": 0,
-          "time": 17.5
+          "time": 35
         },
         {
           "type": "bb",
-          "row": 0,
-          "time": 10
+          "row": 2,
+          "time": 50
+        },
+        {
+          "type": "bb",
+          "row": 1,
+          "time": 47
+        },
+        {
+          "type": "bb",
+          "row": 4,
+          "time": 18
         }
       ]
     }
