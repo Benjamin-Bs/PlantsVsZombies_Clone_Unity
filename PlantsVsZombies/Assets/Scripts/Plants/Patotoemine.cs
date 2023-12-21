@@ -56,7 +56,7 @@ public class Patotoemine : MonoBehaviour
     
     void destroy()
     {
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
     
 }
