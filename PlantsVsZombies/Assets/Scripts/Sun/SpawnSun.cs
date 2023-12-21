@@ -17,4 +17,15 @@ public class SpawnSun : MonoBehaviour
         VectorUtility.setX(instance, vector3.x + Random.Range(-0.2f, 0.2f));
         VectorUtility.setY(instance, vector3.y + Random.Range(-0.2f, 0.2f));
     }
+
+    void increaseCounter()
+    {
+        gameObject.GetComponent<Animator>().SetInteger("counter", gameObject.GetComponent<Animator>().GetInteger("counter") + 1);
+    }
+
+    void resetCounter()
+    {
+        
+        gameObject.GetComponent<Animator>().SetInteger("counter", 0);
+    }
 }

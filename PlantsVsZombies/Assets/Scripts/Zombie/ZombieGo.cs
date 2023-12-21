@@ -6,7 +6,7 @@ using Utility;
 
 public class ZombieGo : MonoBehaviour
 {
-    [SerializeField] public float speed = 0.5f;
+    [SerializeField] public float speed = 0.16f;
     
     void Update()
     {

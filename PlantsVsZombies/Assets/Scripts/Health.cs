@@ -40,9 +40,11 @@ public class Health : MonoBehaviour
     {
         try
         {
-            gameObject.GetComponent<Animator>().SetInteger("health", health);
+            GameObject parent =  GameObjectUtility.findChild(gameObject, "Parent");
+            parent.GetComponent<Animator>().SetInteger("health", health);
+            Debug.Log(health);
         }
-        catch (MissingComponentException e)
+        catch (Exception e)
         {
             
         }
