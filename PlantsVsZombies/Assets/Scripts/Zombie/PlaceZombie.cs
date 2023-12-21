@@ -54,7 +54,7 @@ public class PlaceZombie : MonoBehaviour
     public void place(int row)
     {
         
-        Vector3Int position = new Vector3Int(8, row, 0);
+        Vector3Int position = new Vector3Int(10, row, 0);
         Vector3 worldPosition = this.grid.GetCellCenterWorld(position);
         worldPosition.z = 0;
         
